@@ -1,0 +1,5 @@
+{"id": "2546543", "hallName": "A", "capacity": 50, "startDate": "2021-06-27 15:00:00", "endDate": "2021-06-27 16:00:00"}
+{"id": "2546541", "hallName": "A", "capacity": 50, "startDate": "2021-06-27 16:30:00", "endDate": "2021-06-27 18:00:00"}
+{"id": "2546531", "hallName": "B", "capacity": 100, "startDate": "2021-06-27 15:00:00", "endDate": "2021-06-27 16:00:00"}
+{"id": "2546521", "hallName": "C", "capacity": 200, "startDate": "2021-06-27 15:00:00", "endDate": "2021-06-27 16:00:00"}
+{"id": "2546511", "hallName": "D", "capacity": 350, "startDate": "2021-06-27 15:00:00", "endDate": "2021-06-27 16:00:00"}

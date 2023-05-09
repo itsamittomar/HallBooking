@@ -1,0 +1,236 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request_started",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "service",
+        "importPath": "service",
+        "description": "service",
+        "isExtraImport": true,
+        "detail": "service",
+        "documentation": {}
+    },
+    {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "custom_repository",
+        "importPath": "repository",
+        "description": "repository",
+        "isExtraImport": true,
+        "detail": "repository",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "isExtraImport": true,
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "greet",
+        "kind": 2,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "def greet():\n    return 'Welcome to Python Assignment'\n@app.route('/assignment/sample-bookings', methods=['GET'])\ndef handle_request():\n    \"\"\"\n    API endpoint for fetching all bookings\n    \"\"\"\n    response = prepare_result_container()\n    try:\n        response[\"response\"] = service.fetch_sample_bookings()",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "handle_request",
+        "kind": 2,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "def handle_request():\n    \"\"\"\n    API endpoint for fetching all bookings\n    \"\"\"\n    response = prepare_result_container()\n    try:\n        response[\"response\"] = service.fetch_sample_bookings()\n        response[\"status\"] = SUCCESS_STATUS_CODE\n    except Exception as error:\n        response[\"error\"] = str(error)",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_result_container",
+        "kind": 2,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "def prepare_result_container():\n    \"\"\"\n    Returns a dict - response\n    \"\"\"\n    return {\n        \"response\":{},\n        \"status\":DEFAULT_STATUS_CODE,\n        \"error\": \"\"\n    }\n@app.route('/getData', methods=['POST'])",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "findData",
+        "kind": 2,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "def findData():\n    data = jsonify(request.json)\n    for index in data:\n        for key in data[index]:\n            capacity = data[index][key]\n            startTime = data[index][key]\n            endTime = data[index][key]\n            AvailableHalls = service.search(capacity , startTime , endTime , index)\n            print(AvailableHalls,\"ldkkfd\")\n            return {",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "app = Flask(__name__)\nDEFAULT_STATUS_CODE = \"failure\"\nSUCCESS_STATUS_CODE = \"success\"\n@app.route('/')\ndef greet():\n    return 'Welcome to Python Assignment'\n@app.route('/assignment/sample-bookings', methods=['GET'])\ndef handle_request():\n    \"\"\"\n    API endpoint for fetching all bookings",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_STATUS_CODE",
+        "kind": 5,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "DEFAULT_STATUS_CODE = \"failure\"\nSUCCESS_STATUS_CODE = \"success\"\n@app.route('/')\ndef greet():\n    return 'Welcome to Python Assignment'\n@app.route('/assignment/sample-bookings', methods=['GET'])\ndef handle_request():\n    \"\"\"\n    API endpoint for fetching all bookings\n    \"\"\"",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "SUCCESS_STATUS_CODE",
+        "kind": 5,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "SUCCESS_STATUS_CODE = \"success\"\n@app.route('/')\ndef greet():\n    return 'Welcome to Python Assignment'\n@app.route('/assignment/sample-bookings', methods=['GET'])\ndef handle_request():\n    \"\"\"\n    API endpoint for fetching all bookings\n    \"\"\"\n    response = prepare_result_container()",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "Booking",
+        "kind": 6,
+        "importPath": "model.booking",
+        "description": "model.booking",
+        "peekOfCode": "class Booking:\n    \"\"\"\n    Class to store the booking information\n    \"\"\"\n    def __init__(self, id, hall_name, capacity, start_time, end_time):\n        \"\"\"\n        param -\n            id = string\n            hall_name = string\n            capacity = integer",
+        "detail": "model.booking",
+        "documentation": {}
+    },
+    {
+        "label": "Halls",
+        "kind": 6,
+        "importPath": "model.halls",
+        "description": "model.halls",
+        "peekOfCode": "class Halls(enum.Enum):\n    \"\"\"\n    Class for storing hall capacity\n    Access the hall capacity using -\n        `Halls.A.value` will be 50\n        `Halls.B.value` will be 100\n    \"\"\"\n    A = 50\n    B = 100\n    C = 200",
+        "detail": "model.halls",
+        "documentation": {}
+    },
+    {
+        "label": "Repository",
+        "kind": 6,
+        "importPath": "repository.custom_repository",
+        "description": "repository.custom_repository",
+        "peekOfCode": "class Repository:\n    \"\"\"\n    Class for database client\n    \"\"\"\n    def __init__(self):\n        pass\n    def fetch_sample_bookings(self):\n        \"\"\"\n        Returns random bookings for demo\n        param-",
+        "detail": "repository.custom_repository",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_sample_bookings",
+        "kind": 2,
+        "importPath": "service.service",
+        "description": "service.service",
+        "peekOfCode": "def fetch_sample_bookings():\n    \"\"\"\n    Fetches sample bookings for demo\n    \"\"\"\n    repository = custom_repository.Repository()\n    bookings = repository.fetch_sample_bookings()\n    return bookings\ndef search(capacity , startTime , endTime , Index):\n    dic={}\n    with open('database/booking.txt' ,'r') as DBdata:",
+        "detail": "service.service",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "service.service",
+        "description": "service.service",
+        "peekOfCode": "def search(capacity , startTime , endTime , Index):\n    dic={}\n    with open('database/booking.txt' ,'r') as DBdata:\n        finalList =defaultdict(list)\n        if capacity in DBdata and DBdata[capacity] >0:\n            if startTime in DBdata and DBdata[startTime] > 0:\n                if endTime in DBdata and DBdata[endTime] > 0:\n                    dic[Index].append(DBdata[hallname])\n                    return finalList",
+        "detail": "service.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_sample_bookings",
+        "kind": 2,
+        "importPath": "test.test_api",
+        "description": "test.test_api",
+        "peekOfCode": "def get_sample_bookings():\n    \"\"\"\n    Creates a request to fetch all bookings\n    \"\"\"\n    response = requests.get(\"http://localhost:8085/assignment/sample-bookings\", json={})\n    pprint(response.json())\nif __name__ == '__main__':\n    get_sample_bookings()",
+        "detail": "test.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "kind": 2,
+        "importPath": "start",
+        "description": "start",
+        "peekOfCode": "def initialize_database():\n    \"\"\"\n    Initializes and pre-populates bookings in json file\n    File name - database/booking.json\n    \"\"\"\n    with open(\"database/booking.txt\", \"w\") as outfile:\n        print(outfile,\"nkjndkjfd\")\n        bookings = [{\"id\": \"2546543\", \"hallName\": \"A\", \"capacity\": 50, \"startDate\": \"2021-06-27 15:00:00\",\n                     \"endDate\": \"2021-06-27 16:00:00\"},\n                    {\"id\": \"2546541\", \"hallName\": \"A\", \"capacity\": 50, \"startDate\": \"2021-06-27 16:30:00\",",
+        "detail": "start",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "start",
+        "description": "start",
+        "peekOfCode": "PORT = 8085\ndef initialize_database():\n    \"\"\"\n    Initializes and pre-populates bookings in json file\n    File name - database/booking.json\n    \"\"\"\n    with open(\"database/booking.txt\", \"w\") as outfile:\n        print(outfile,\"nkjndkjfd\")\n        bookings = [{\"id\": \"2546543\", \"hallName\": \"A\", \"capacity\": 50, \"startDate\": \"2021-06-27 15:00:00\",\n                     \"endDate\": \"2021-06-27 16:00:00\"},",
+        "detail": "start",
+        "documentation": {}
+    }
+]
